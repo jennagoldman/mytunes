@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import SearchForm from '';
-import ArtistsList from '';
-import Paging from '';
+import SearchForm from '../../components/Artists/SearchForm.jsx';
+import ArtistsList from '../../components/Artists/ArtistsLists.jsx';
+import Paging from '../../components/Artists/Paging.jsx';
 
 const ArtistsContainer = () => {
   const [searchQuery, setSearchQuery] = useState('');
