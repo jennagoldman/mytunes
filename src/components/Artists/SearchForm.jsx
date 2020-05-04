@@ -15,3 +15,5 @@ SearchForm.propTypes = {
   onInputChange: PropTypes.func.isRequired,
   onSearch: PropTypes.func.isRequired
 };
+
+export default SearchForm;

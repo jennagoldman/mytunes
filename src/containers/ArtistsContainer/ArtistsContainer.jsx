@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SearchForm from '../../components/Artists/SearchForm.jsx';
 import ArtistsList from '../../components/Artists/ArtistsLists.jsx';
 import Paging from '../../components/Artists/Paging.jsx';
+import { fetchArtists } from '../../services/musicbrainz/musicbrainz-api.js';
 
 const ArtistsContainer = () => {
   const [searchQuery, setSearchQuery] = useState('');

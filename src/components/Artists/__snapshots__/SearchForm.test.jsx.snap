@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm matches a snapshot 1`] = `
+<section>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      value="electric light orchestra"
+    />
+    <button>
+      Search
+    </button>
+  </form>
+</section>
+`;
