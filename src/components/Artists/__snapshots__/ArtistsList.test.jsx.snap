@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistsList matches a snapshot 1`] = `
+<section>
+  <ul>
+    <li>
+      <h3>
+        Electric Light Orchestra
+      </h3>
+    </li>
+    <li>
+      <h3>
+        Pretty Lights
+      </h3>
+    </li>
+  </ul>
+</section>
+`;
