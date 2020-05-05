@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ArtistReleases from '../../components/Artist/ArtistReleases.jsx';
+import ArtistReleases from '../../components/Releases/ArtistReleases.jsx';
 import { fetchArtist, fetchArtistReleases } from '../../services/musicbrainz/musicbrainz-api';
 import PropTypes from 'prop-types';
 
