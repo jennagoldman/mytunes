@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ArtistsList = ({ artists }) => {
+const ArtistsList = ({ artists, location }) => {
   const artistsListItems = artists.map(artist => (
     <li key={artist.id}>
       <h3>{artist.name}</h3>
+      <h3>{location}</h3>
     </li>
   ));
 
@@ -18,7 +19,7 @@ const ArtistsList = ({ artists }) => {
 };
 
 ArtistsList.propTypes = {
-  artists: PropTypes.array
+  artists: PropTypes.array.isRequired
 };
 
 export default ArtistsList;

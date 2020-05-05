@@ -12,7 +12,7 @@ const ArtistsContainer = () => {
   const handleSearch = event => {
     event.preventDefault();
     fetchArtists(searchTerm, offset)
-      .then(fetchedArtists => setArtists(fetchedArtists));
+      .then(artists => setArtists(artists));
   };
 
   const handleInput = ({ target }) => {
@@ -34,7 +34,7 @@ const ArtistsContainer = () => {
     <>
       <SearchForm searchTerm={searchTerm} onInputChange={handleInput} onSearch={handleSearch} />
       <Paging offset={offset} artists={artists} changeOffset={changeOffset} />
-      <ArtistsList artists={artists} />
+      { artists && <ArtistsList artists={artists} /> }
     </>
   );
 };
