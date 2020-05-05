@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const ArtistsList = ({ artists, location }) => {
+const ArtistsList = ({ artists }) => {
   const artistsListItems = artists.map(artist => (
     <li key={artist.id}>
-      <h3>{artist.name}</h3>
-      <h3>{location}</h3>
+      <Link to={`/artist/${artist.id}`}>
+        <h3>{artist.name}</h3>
+      </Link>
     </li>
   ));
 

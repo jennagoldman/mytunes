@@ -10,7 +10,7 @@ const Paging = ({ artists, offset, changeOffset }) => (
 
 Paging.propTypes = {
   artists: PropTypes.array,
-  offset: PropTypes.number.isRequired,
+  offset: PropTypes.number,
   changeOffset: PropTypes.func.isRequired
 };
 
