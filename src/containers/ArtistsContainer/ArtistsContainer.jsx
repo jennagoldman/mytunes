@@ -5,18 +5,18 @@ import Paging from '../../components/Artists/Paging.jsx';
 import { fetchArtists } from '../../services/musicbrainz/musicbrainz-api.js';
 
 const ArtistsContainer = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
   const [artists, setArtists] = useState([]);
   const [offset, setOffset] = useState(0);
   
   const handleSearch = event => {
     event.preventDefault();
-    fetchArtists(searchQuery, offset)
+    fetchArtists(searchTerm, offset)
       .then(fetchedArtists => setArtists(fetchedArtists));
   };
 
   const handleInput = ({ target }) => {
-    setSearchQuery(target.value);
+    setSearchTerm(target.value);
   };
 
   const changeOffset = (by) => {
@@ -25,16 +25,16 @@ const ArtistsContainer = () => {
 
   useEffect(() => {
     if(offset > 0) {
-      fetchArtists(searchQuery, offset)
+      fetchArtists(searchTerm, offset)
         .then(fetchedArtists => setArtists(fetchedArtists));
     }
   }, [offset]);
 
   return (
     <>
-      <SearchForm onInputChange={handleInput} onSearch={handleSearch} />
-      <ArtistsList artists={artists} />
+      <SearchForm searchTerm={searchTerm} onInputChange={handleInput} onSearch={handleSearch} />
       <Paging offset={offset} artists={artists} changeOffset={changeOffset} />
+      <ArtistsList artists={artists} />
     </>
   );
 };

@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SearchForm = ({ searchQuery, onInputChange, onSearch }) => (
+const SearchForm = ({ searchTerm, onInputChange, onSearch }) => (
   <section>
     <form onSubmit={onSearch}>
-      <input value={searchQuery} onChange={onInputChange} />
+      <input value={searchTerm} onChange={onInputChange} />
       <button>Search</button>
     </form>
   </section>
 );
 
 SearchForm.propTypes = {
-  searchQuery: PropTypes.string,
+  searchTerm: PropTypes.string,
   onInputChange: PropTypes.func.isRequired,
   onSearch: PropTypes.func
 };
