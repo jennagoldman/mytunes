@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Header/Header.jsx';
 import ArtistsContainer from '../../containers/ArtistsContainer/ArtistsContainer.jsx';
-import ArtistReleases from '../../containers/ArtistReleases/ArtistReleases.jsx';
+import ReleasesContainer from '../../containers/ReleasesContainer/ReleasesContainer.jsx';
 import { 
   BrowserRouter as Router, 
   Switch, 
@@ -15,7 +15,7 @@ export default function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={ArtistsContainer} />
-          <Route path="/artist/:id" component={ArtistReleases} />
+          <Route path="/artist/:id" component={ReleasesContainer} />
         </Switch>
       </Router>
     </>
