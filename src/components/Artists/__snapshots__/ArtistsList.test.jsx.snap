@@ -7,11 +7,13 @@ exports[`ArtistsList matches a snapshot 1`] = `
       <h3>
         Electric Light Orchestra
       </h3>
+      <h3 />
     </li>
     <li>
       <h3>
         Pretty Lights
       </h3>
+      <h3 />
     </li>
   </ul>
 </section>

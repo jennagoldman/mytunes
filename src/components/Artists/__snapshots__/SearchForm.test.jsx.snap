@@ -7,7 +7,6 @@ exports[`SearchForm matches a snapshot 1`] = `
   >
     <input
       onChange={[Function]}
-      value="electric light orchestra"
     />
     <button>
       Search
