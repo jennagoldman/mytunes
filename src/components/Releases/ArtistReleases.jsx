@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ArtistRelease from './ArtistRelease.jsx';
 import PropTypes from 'prop-types';
+import styles from './ArtistReleases.css';
 
-const ArtistReleases = ({ artist, releases }) => {
+const ArtistReleases = ({ artist, releases, onBrokenImage }) => {
   const releasesListItems = releases.map(release => (
     <li key={artist.id}>
       <Link to={`/release/${release.id}`}>
-        <ArtistRelease {...release} />
+        <ArtistRelease {...release} onBrokenImage={onBrokenImage} />
       </Link>
     </li>
   ));
@@ -24,7 +25,8 @@ const ArtistReleases = ({ artist, releases }) => {
 
 ArtistReleases.propTypes = {
   artist: PropTypes.object.isRequired,
-  releases: PropTypes.array.isRequired
+  releases: PropTypes.array.isRequired,
+  onBrokenImage: PropTypes.func.isRequired
 };
 
 export default ArtistReleases;
