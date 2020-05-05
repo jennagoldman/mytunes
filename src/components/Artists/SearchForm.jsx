@@ -11,9 +11,9 @@ const SearchForm = ({ searchQuery, onInputChange, onSearch }) => (
 );
 
 SearchForm.propTypes = {
-  searchQuery: PropTypes.string.isRequired,
+  searchQuery: PropTypes.string,
   onInputChange: PropTypes.func.isRequired,
-  onSearch: PropTypes.func.isRequired
+  onSearch: PropTypes.func
 };
 
 export default SearchForm;

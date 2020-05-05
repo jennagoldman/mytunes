@@ -8,10 +8,10 @@ const ArtistsContainer = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [artists, setArtists] = useState([]);
   
-  const handleSearch = (e) => {
-    e.preventDefault();
+  const handleSearch = event => {
+    event.preventDefault();
     fetchArtists(searchQuery)
-      .then(artists => setArtists(artists));
+      .then(fetchedArtists => setArtists(fetchedArtists));
   };
 
   const handleInput = ({ target }) => {
@@ -20,9 +20,9 @@ const ArtistsContainer = () => {
 
   return (
     <>
-      <SearchForm onInputChange={handleInput} onSubmit={handleSearch} />
+      <SearchForm onInputChange={handleInput} onSearch={handleSearch} />
       <ArtistsList artists={artists} />
-      <Paging />
+      {/* <Paging /> */}
     </>
   );
 };
