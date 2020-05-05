@@ -18,7 +18,7 @@ const ArtistsList = ({ artists }) => {
 };
 
 ArtistsList.propTypes = {
-  artists: PropTypes.array.isRequired
+  artists: PropTypes.array
 };
 
 export default ArtistsList;
