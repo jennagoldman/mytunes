@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistsList matches a snapshot 1`] = `
+<section>
+  <ul>
+    <li>
+      <Link
+        to="/artist/undefined"
+      >
+        <ArtistItem
+          artistName="Electric Light Orchestra"
+        />
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/artist/undefined"
+      >
+        <ArtistItem
+          artistName="Pretty Lights"
+        />
+      </Link>
+    </li>
+  </ul>
+</section>
+`;
