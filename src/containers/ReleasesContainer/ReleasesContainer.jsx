@@ -14,13 +14,9 @@ const ReleasesContainer = ({ match }) => {
     fetchReleases(match.params.id)
       .then(releases => setReleases(releases));
   }, []);
-
-  const handleBrokenImage = e => {
-    e.target.src = 'https://www.placecage.com/g/250/250';
-  };
   
   return (
-    <ReleasesList artist={artist} releases={releases} onBrokenImage={handleBrokenImage} />
+    <ReleasesList artist={artist} releases={releases} />
   );
 };
 
