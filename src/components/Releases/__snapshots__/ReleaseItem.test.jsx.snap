@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReleaseItem matches a snapshot 1`] = `
+<div
+  className="releaseDiv"
+>
+  <h3>
+    Out of the Blue
+  </h3>
+  <img
+    alt="Out of the Blue"
+    src="http://coverartarchive.org/release/123abc/front"
+  />
+</div>
+`;

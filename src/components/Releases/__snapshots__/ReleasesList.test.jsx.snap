@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReleasesList matches a snapshot 1`] = `
+<Fragment>
+  <h2>
+    Electric Light Orchestra
+     - Release History
+  </h2>
+  <ul>
+    <li
+      className="releaseListItem"
+      key="123abc"
+    >
+      <Link
+        to="/release/Electric Light Orchestra/123abc"
+      >
+        <ReleaseItem
+          coverArt={true}
+          releaseId="123abc"
+          releaseTitle="Out of the Blue"
+        />
+      </Link>
+    </li>
+    <li
+      className="releaseListItem"
+      key="456def"
+    >
+      <Link
+        to="/release/Electric Light Orchestra/456def"
+      >
+        <ReleaseItem
+          coverArt={true}
+          releaseId="456def"
+          releaseTitle="Face the Music"
+        />
+      </Link>
+    </li>
+  </ul>
+</Fragment>
+`;

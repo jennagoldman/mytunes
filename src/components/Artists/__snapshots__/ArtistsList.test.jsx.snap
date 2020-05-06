@@ -4,16 +4,22 @@ exports[`ArtistsList matches a snapshot 1`] = `
 <section>
   <ul>
     <li>
-      <h3>
-        Electric Light Orchestra
-      </h3>
-      <h3 />
+      <Link
+        to="/artist/undefined"
+      >
+        <ArtistItem
+          artistName="Electric Light Orchestra"
+        />
+      </Link>
     </li>
     <li>
-      <h3>
-        Pretty Lights
-      </h3>
-      <h3 />
+      <Link
+        to="/artist/undefined"
+      >
+        <ArtistItem
+          artistName="Pretty Lights"
+        />
+      </Link>
     </li>
   </ul>
 </section>

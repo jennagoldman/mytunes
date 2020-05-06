@@ -3,10 +3,24 @@
 exports[`App component renders App 1`] = `
 <Fragment>
   <BrowserRouter>
+    <Header />
     <Switch>
       <Route
         component={[Function]}
+        exact={true}
         path="/"
+      />
+      <Route
+        component={[Function]}
+        path="/artist/:id"
+      />
+      <Route
+        component={[Function]}
+        path="/release/:artist/:id"
+      />
+      <Route
+        component={[Function]}
+        path="/song/:artist/:song"
       />
     </Switch>
   </BrowserRouter>

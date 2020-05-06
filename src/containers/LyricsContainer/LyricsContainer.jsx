@@ -6,14 +6,17 @@ import PropTypes from 'prop-types';
 const LyricsContainer = ({ match }) => {
   const [lyrics, setLyrics] = useState('');
 
+  const artist = match.params.artist;
+  const song = match.params.song;
+
   useEffect(() => {
-    fetchLyrics(match.params.artist, match.params.song)
+    fetchLyrics(artist, song)
       .then(lyrics => setLyrics(lyrics));
   }, []);
   
   return (
     <>
-      <Lyrics lyrics={lyrics} />
+      <Lyrics lyrics={lyrics} artist={artist} song={song} />
     </>
   );
 };
