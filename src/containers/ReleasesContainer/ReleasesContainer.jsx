@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ArtistReleases from '../../components/Releases/ArtistReleases.jsx';
-import { fetchArtist, fetchArtistReleases } from '../../services/musicbrainz/musicbrainz-api';
+import ReleasesList from '../../components/Releases/ReleasesList.jsx';
+import { fetchArtist, fetchReleases } from '../../services/musicbrainz/musicbrainz-api';
 import PropTypes from 'prop-types';
 
 const ReleasesContainer = ({ match }) => {
@@ -11,7 +11,7 @@ const ReleasesContainer = ({ match }) => {
     fetchArtist(match.params.id)
       .then(artist => setArtist(artist));
 
-    fetchArtistReleases(match.params.id)
+    fetchReleases(match.params.id)
       .then(releases => setReleases(releases));
   }, []);
 
@@ -20,7 +20,7 @@ const ReleasesContainer = ({ match }) => {
   };
   
   return (
-    <ArtistReleases artist={artist} releases={releases} onBrokenImage={handleBrokenImage} />
+    <ReleasesList artist={artist} releases={releases} onBrokenImage={handleBrokenImage} />
   );
 };
 

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ArtistRelease from './ArtistRelease.jsx';
+import ReleaseItem from './ReleaseItem.jsx';
 import PropTypes from 'prop-types';
-import styles from './ArtistReleases.css';
+import styles from './ReleasesList.css';
 
-const ArtistReleases = ({ artist, releases, onBrokenImage }) => {
+const ReleasesList = ({ artist, releases, onBrokenImage }) => {
   const releasesListItems = releases.map(release => (
-    <li key={artist.id}>
+    <li className={styles.releaseListItem} key={artist.id}>
       <Link to={`/release/${release.id}`}>
-        <ArtistRelease {...release} onBrokenImage={onBrokenImage} />
+        <ReleaseItem {...release} onBrokenImage={onBrokenImage} />
       </Link>
     </li>
   ));
@@ -23,10 +23,10 @@ const ArtistReleases = ({ artist, releases, onBrokenImage }) => {
   );
 };
 
-ArtistReleases.propTypes = {
+ReleasesList.propTypes = {
   artist: PropTypes.object.isRequired,
   releases: PropTypes.array.isRequired,
   onBrokenImage: PropTypes.func.isRequired
 };
 
-export default ArtistReleases;
+export default ReleasesList;

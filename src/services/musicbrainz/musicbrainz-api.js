@@ -9,9 +9,14 @@ export const fetchArtist = artistId => {
     .then(res => res.json());
 };
 
-export const fetchArtistReleases = artistId => {
+export const fetchReleases = artistId => {
   return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json`)
     .then(res => res.json())
     .then(json => json.releases);
+};
+
+export const fetchRelease = releaseId => {
+  return fetch(`https://musicbrainz.org/ws/2/release/${releaseId}?&fmt=json`)
+    .then(res => res.json());
 };
 
