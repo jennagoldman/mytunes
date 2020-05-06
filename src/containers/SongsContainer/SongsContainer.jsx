@@ -20,10 +20,10 @@ const SongsContainer = ({ match }) => {
   );
 };
 
-export default SongsContainer;
-
 SongsContainer.propTypes = {
   match: PropTypes.object.isRequired,
   release: PropTypes.object.isRequired,
   songs: PropTypes.array.isRequired
 };
+
+export default SongsContainer;

@@ -20,3 +20,9 @@ export const fetchRelease = releaseId => {
     .then(res => res.json());
 };
 
+export const fetchSongs = releaseId => {
+  return fetch(`http://musicbrainz.org/ws/2/songs?release=${releaseId}&fmt=json`)
+    .then(res => res.json())
+    .then(json => json.releases);
+};
+
