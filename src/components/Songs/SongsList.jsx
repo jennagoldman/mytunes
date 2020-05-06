@@ -2,12 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SongItem from './SongItem.jsx';
 import PropTypes from 'prop-types';
-import styles from './ReleasesList.css';
 
-const SongsList = ({ title, songs }) => {
+const SongsList = ({ releaseTitle, songs, artist }) => {
   const songsListItems = songs.map(song => (
-    <li className={styles.songsListItem} key={song.id}>
-      <Link to={`/song/${song.id}`}>
+    <li key={song.id}>
+      <Link to={`/song/${artist}/${song.title}`}>
         <SongItem {...song} />
       </Link>
     </li>
@@ -15,7 +14,7 @@ const SongsList = ({ title, songs }) => {
 
   return (
     <>
-      <h2>{title} - Release History</h2>
+      <h2>{releaseTitle} - Song List</h2>
       <ul>
         {songsListItems}
       </ul>
@@ -24,8 +23,9 @@ const SongsList = ({ title, songs }) => {
 };
 
 SongsList.propTypes = {
-  title: PropTypes.string.isRequired,
-  songs: PropTypes.array.isRequired
+  releaseTitle: PropTypes.string.isRequired,
+  songs: PropTypes.array.isRequired,
+  artist: PropTypes.string.isRequired
 };
 
-export default ReleasesList;
+export default SongsList;

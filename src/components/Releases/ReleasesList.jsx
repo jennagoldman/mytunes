@@ -4,11 +4,11 @@ import ReleaseItem from './ReleaseItem.jsx';
 import PropTypes from 'prop-types';
 import styles from './ReleasesList.css';
 
-const ReleasesList = ({ artist, releases, onBrokenImage }) => {
+const ReleasesList = ({ artist, releases }) => {
   const releasesListItems = releases.map(release => (
-    <li className={styles.releaseListItem} key={artist.id}>
-      <Link to={`/release/${release.id}`}>
-        <ReleaseItem {...release} onBrokenImage={onBrokenImage} />
+    <li className={styles.releaseListItem} key={release.releaseId}>
+      <Link to={`/release/${artist.name}/${release.releaseId}`}>
+        <ReleaseItem {...release} />
       </Link>
     </li>
   ));

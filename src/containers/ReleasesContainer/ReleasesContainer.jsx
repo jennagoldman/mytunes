@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReleasesList from '../../components/Releases/ReleasesList.jsx';
-import { fetchArtist, fetchReleases } from '../../services/musicbrainz/musicbrainz-api';
+import { fetchArtist, fetchReleases } from '../../services/musicbrainz-api';
 import PropTypes from 'prop-types';
 
 const ReleasesContainer = ({ match }) => {

@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ReleaseItem.css';
 
-const ReleaseItem = ({ title, id, onBrokenImage }) => (
+const ReleaseItem = ({ releaseTitle, releaseId, coverArt }) => (
   <div className={styles.releaseDiv}>
-    <h3>{title}</h3>
-    <img src={`http://coverartarchive.org/release/${id}/front`} onError={onBrokenImage} alt={title} />
+    <h3>{releaseTitle}</h3>
+    <img src={ coverArt ? `http://coverartarchive.org/release/${releaseId}/front` : 'https://www.placecage.com/g/250/250'} alt={releaseTitle} />
   </div>
 );
 
 
 ReleaseItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  onBrokenImage: PropTypes.func.isRequired
+  releaseTitle: PropTypes.string.isRequired,
+  releaseId: PropTypes.string.isRequired,
+  coverArt: PropTypes.bool
 };
 
 
