@@ -22,7 +22,10 @@ const ArtistsList = ({ artists }) => {
 };
 
 ArtistsList.propTypes = {
-  artists: PropTypes.array.isRequired
+  artists: PropTypes.arrayOf(PropTypes.shape({
+    artistId: PropTypes.string.isRequired,
+    artistName: PropTypes.string.isRequired
+  })).isRequired
 };
 
 export default ArtistsList;
