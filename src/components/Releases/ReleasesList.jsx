@@ -25,8 +25,7 @@ const ReleasesList = ({ artist, releases }) => {
 
 ReleasesList.propTypes = {
   artist: PropTypes.object.isRequired,
-  releases: PropTypes.array.isRequired,
-  onBrokenImage: PropTypes.func.isRequired
+  releases: PropTypes.array.isRequired
 };
 
 export default ReleasesList;

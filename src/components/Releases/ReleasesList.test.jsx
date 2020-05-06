@@ -17,8 +17,7 @@ describe('ReleasesList', () => {
           releaseTitle: 'Face the Music', 
           coverArt: true 
         }
-      ]} 
-      onBrokenImage={() => {}} />);
+      ]} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
