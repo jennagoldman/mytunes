@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SongItem matches a snapshot 1`] = `
+<div
+  className="songDiv"
+>
+  <h3>
+    Out of the Blue
+  </h3>
+</div>
+`;

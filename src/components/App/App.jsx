@@ -1,14 +1,15 @@
 import React from 'react';
-import Header from '../Header/Header.jsx';
-import ArtistsContainer from '../../containers/ArtistsContainer/ArtistsContainer.jsx';
-import ReleasesContainer from '../../containers/ReleasesContainer/ReleasesContainer.jsx';
-import SongsContainer from '../../containers/SongsContainer/SongsContainer.jsx';
-import LyricsContainer from '../../containers/LyricsContainer/LyricsContainer.jsx';
 import { 
   BrowserRouter as Router, 
   Switch, 
   Route 
 } from 'react-router-dom';
+import Header from '../Header/Header.jsx';
+import ArtistsContainer from '../../containers/ArtistsContainer/ArtistsContainer.jsx';
+import ReleasesContainer from '../../containers/ReleasesContainer/ReleasesContainer.jsx';
+import SongsContainer from '../../containers/SongsContainer/SongsContainer.jsx';
+import LyricsContainer from '../../containers/LyricsContainer/LyricsContainer.jsx';
+
 
 
 export default function App() {

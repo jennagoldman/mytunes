@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SongsList matches a snapshot 1`] = `
+<Fragment>
+  <h2>
+    Out of the Blue
+     - Song List
+  </h2>
+  <ul>
+    <li
+      key="789ghi"
+    >
+      <Link
+        to="/song/Electric Light Orchestra/Mr. Blue Sky"
+      >
+        <SongItem
+          id="789ghi"
+          title="Mr. Blue Sky"
+        />
+      </Link>
+    </li>
+    <li
+      key="345jkl"
+    >
+      <Link
+        to="/song/Electric Light Orchestra/It's Over"
+      >
+        <SongItem
+          id="345jkl"
+          title="It's Over"
+        />
+      </Link>
+    </li>
+  </ul>
+</Fragment>
+`;
