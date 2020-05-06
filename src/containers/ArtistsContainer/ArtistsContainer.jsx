@@ -9,7 +9,7 @@ import { fetchArtists } from '../../services/musicbrainz-api.js';
 const ArtistsContainer = ({ location }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [artists, setArtists] = useState([]);
-  const [offset, setOffset] = useState(null);
+  const [offset, setOffset] = useState(0);
 
   useEffect(() => {
     const query = queryString.parse(location.search);
@@ -17,7 +17,7 @@ const ArtistsContainer = ({ location }) => {
   }, []);
 
   useEffect(() => {
-    if(offset > 0 || offset === 0) {
+    if(offset > 0) {
       fetchArtists(searchTerm, offset)
         .then(fetchedArtists => setArtists(fetchedArtists));
     }
@@ -29,7 +29,9 @@ const ArtistsContainer = ({ location }) => {
 
   const handleSearch = event => {
     event.preventDefault();
-    setOffset(0);
+    fetchArtists(searchTerm, 0)
+      .then(fetchedArtists => setArtists(fetchedArtists))
+      .then(setOffset(0));
   };
 
   const changeOffset = (by) => {
